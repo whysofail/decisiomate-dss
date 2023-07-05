@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Alternative {
+  id    Int                        @id @default(autoincrement())
+  name  String
+  score AlternativeCriteriaScore[]
+}
+
+model Criteria {
+  id     Int                        @id @default(autoincrement())
+  name   String
+  type   CriteriaType               @default(Cost)
+  weight Int                        @default(0)
+  score  AlternativeCriteriaScore[]
+}
+
+enum CriteriaType {
+  Cost
+  Benefit
+}
+
+model AlternativeCriteriaScore {
+  id            Int         @id @default(autoincrement())
+  alternativeId Int?
+  alternative   Alternative? @relation(fields: [alternativeId], references: [id])
+  criteriaId    Int?
+  criteria      Criteria?    @relation(fields: [criteriaId], references: [id])
+  score         Int         
+}
