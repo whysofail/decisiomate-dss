@@ -27,7 +27,7 @@ const AlternativeAdd = () => {
     router.refresh();
     setTimeout(() => {
       setToast(false);
-    }, 2500);
+    }, 2000);
   };
   return (
     <div>
@@ -45,7 +45,7 @@ const AlternativeAdd = () => {
         </div>
       </form>
 
-      {!toast ? name : <Toast message="Alternative added success" type="success" />}
+      {!toast ? name : <Toast message="Alternative added" type="success" />}
     </div>
   );
 };

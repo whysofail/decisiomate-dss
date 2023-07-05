@@ -1,0 +1,47 @@
+[
+    {
+        "alternativeId" : 1,
+        "criteriaId": 1,
+        "score" : 100
+    },
+    {
+        "alternativeId" : 1,
+        "criteriaId": 2,
+        "score" : 100
+    },
+    {
+        "alternativeId" : 1,
+        "criteriaId": 3,
+        "score" : 100
+    },
+    {
+        "alternativeId" : 2,
+        "criteriaId": 1,
+        "score" : 100
+    },
+    {
+        "alternativeId" : 2,
+        "criteriaId": 2,
+        "score" : 100
+    },
+    {
+        "alternativeId" : 2,
+        "criteriaId": 3,
+        "score" : 100
+    },
+    {
+        "alternativeId" : 3,
+        "criteriaId": 1,
+        "score" : 100
+    },
+    {
+        "alternativeId" : 3,
+        "criteriaId": 2,
+        "score" : 100
+    },
+    {
+        "alternativeId" : 3,
+        "criteriaId": 3,
+        "score" : 100
+    }
+]

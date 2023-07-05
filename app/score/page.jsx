@@ -1,7 +1,7 @@
 import React from 'react'
-import ScoreList from '@/components/Score/ScoreList'
+import Score from '@/components/Score/Score'
 
-const Score = () => {
+const Scores = () => {
   return (
     <div>
          <div className="flex flex-col flex-wrap min-h-screen pt-28 sm:pt-12 bg-white">
@@ -11,7 +11,7 @@ const Score = () => {
           <small>Add Criteria to be calculated.</small>
         </div>
         <div className="">
-         <ScoreList />    
+         <Score />    
         </div>
         
        
@@ -21,4 +21,4 @@ const Score = () => {
   )
 }
 
-export default Score
+export default Scores
