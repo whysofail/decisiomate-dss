@@ -33,7 +33,7 @@ const CriteriaUpdate = (props) => {
   return (
     <div>
       <button className="btn btn-success" onClick={() => showModal()}>
-        <FontAwesomeIcon icon={faEdit} />
+        <FontAwesomeIcon icon={faEdit} color='white'/>
       </button>
       <dialog
         id="my_modal_3"
@@ -41,7 +41,6 @@ const CriteriaUpdate = (props) => {
         open={show}
       >
         <form method="dialog" className="modal-box" onSubmit={handleUpdate}>
-            {JSON.stringify(type)}
           <h3 className="font-bold text-lg">Update Alternative {props.id}</h3>
           <p className="py-4">
             Update Alternatives

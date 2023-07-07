@@ -29,7 +29,7 @@ const AlternativeUpdate = (props) => {
   return (
     <div>
       <button className="btn btn-success" onClick={() => showModal()}>
-        <FontAwesomeIcon icon={faEdit} />
+        <FontAwesomeIcon icon={faEdit} color='white'/>
       </button>
       <dialog
         id="my_modal_3"

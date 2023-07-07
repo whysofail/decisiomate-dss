@@ -35,36 +35,70 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/test" prefetch={false} className={path == "/test" ? "active" : ""}>
-                Test
+              <Link
+                href="/alternative"
+                className={path == "/alternative" ? "active" : ""}
+              >
+                Alternative
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/criterias"
+                className={path == "/criterias" ? "active" : ""}
+              >
+                Criteria
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/results"
+                className={path == "/results" ? "active" : ""}
+              >
+                Results
               </Link>
             </li>
             <li>
               <Link href="/test" className={path == "/test" ? "active" : ""}>
-                Test
+                About
               </Link>
             </li>
           </ul>
         </div>
-        <Link className="btn btn-ghost normal-case text-xl" href="/">DecisioMate</Link>
+        <Link className="btn btn-ghost normal-case text-xl" href="/">
+          DecisioMate
+        </Link>
       </div>
 
       <div className="navbar-center hidden lg:flex">
-        
         <ul className="menu menu-horizontal px-1 gap-20">
           <li>
-            <Link href="/" className={path == "/" ? "active" : ""} >
+            <Link href="/" className={path == "/" ? "active" : ""}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/alternative" prefetch={false} className={path == "/alternative" ? "active" : ""}>
+            <Link
+              href="/alternative"
+              className={path == "/alternative" ? "active" : ""}
+            >
               Alternative
             </Link>
           </li>
           <li>
-            <Link href="/criterias" className={path == "/criterias" ? "active" : ""}>
+            <Link
+              href="/criterias"
+              className={path == "/criterias" ? "active" : ""}
+            >
               Criteria
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/results"
+              className={path == "/results" ? "active" : ""}
+            >
+              Results
             </Link>
           </li>
           <li>
@@ -74,9 +108,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
- 
-      </div>
+      <div className="navbar-end"></div>
     </nav>
   );
 };

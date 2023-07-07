@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,7 +25,7 @@ const CriteriaDelete = (props) => {
   return (
     <div>
       <button className="btn btn-error" onClick={() => showModal()}>
-      <FontAwesomeIcon icon={faTrash} />
+      <FontAwesomeIcon icon={faTrash} color="white" />
       </button>
       <dialog
         id="my_modal_2"

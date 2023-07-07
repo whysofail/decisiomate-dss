@@ -25,7 +25,7 @@ const AlternativeDelete = (props) => {
   return (
     <div>
       <button className="btn btn-error" onClick={() => showModal()}>
-      <FontAwesomeIcon icon={faTrash} />
+      <FontAwesomeIcon icon={faTrash} color="white" />
       </button>
       <dialog
         id="my_modal_2"

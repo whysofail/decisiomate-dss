@@ -1,15 +1,17 @@
-import React from 'react'
-import CriteriasList from './CriteriaList'
-import CriteriaAdd from './CriteriaAdd'
+import React from "react";
+import CriteriasList from "./CriteriaList";
+import CriteriaAdd from "./CriteriaAdd";
 
 const Criteria = () => {
   return (
     <div>
-        <CriteriaAdd/>
-        
-        <CriteriasList />
-    </div>
-  )
-}
+      <div className="py-4">
+        <CriteriaAdd />
+      </div>
 
-export default Criteria
+      <CriteriasList />
+    </div>
+  );
+};
+
+export default Criteria;

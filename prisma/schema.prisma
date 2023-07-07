@@ -35,5 +35,5 @@ model AlternativeCriteriaScore {
   alternative   Alternative? @relation(fields: [alternativeId], references: [id])
   criteriaId    Int?
   criteria      Criteria?    @relation(fields: [criteriaId], references: [id])
-  score         Int         
+  score         Decimal         
 }

@@ -32,7 +32,7 @@ const CriteriaAdd = () => {
   };
   return (
     <div>
-      <form className="form flex gap-3 justify-between" onSubmit={handleSubmit}>
+      <form className="form flex flex-col sm:flex-row gap-3 justify-between" onSubmit={handleSubmit}>
         <div className="join w-full">
           <button type="button" className="btn join-item">
             Criteria

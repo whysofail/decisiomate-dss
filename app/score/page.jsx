@@ -1,24 +1,24 @@
-import React from 'react'
-import Score from '@/components/Score/Score'
+import React from "react";
+import Score from "@/components/Score/Score";
+
+export const metadata = {
+  title: "DecisioMate | Scores",
+};
 
 const Scores = () => {
   return (
-    <div>
-         <div className="flex flex-col flex-wrap min-h-screen pt-28 sm:pt-12 bg-white">
-      <div className="w-full sm:w-[50%] self-center">
-        <div className="self-start">
-          <h1 className="text-3xl font-semibold">Add your Criteria</h1>
-          <small>Add Criteria to be calculated.</small>
-        </div>
-        <div className="">
-         <Score />    
-        </div>
-        
-       
+    <>
+      <div className="self-start">
+        <h1 className="text-3xl font-semibold">
+          Assign the criteria scores to each Alternatives
+        </h1>
+        <small>Add Score to be calculated.</small>
       </div>
-    </div>
-    </div>
-  )
-}
+      <div className="">
+        <Score />
+      </div>
+    </>
+  );
+};
 
-export default Scores
+export default Scores;
