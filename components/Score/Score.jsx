@@ -21,7 +21,7 @@ const Score = async () => {
     const criterias = await getCriterias()
   return (
     <div>
-        <ScoreList alternatives={alternatives} criterias={criterias}/>
+        <ScoreList alternatives={alternatives} criterias={criterias}/> 
     </div>
   )
 }
