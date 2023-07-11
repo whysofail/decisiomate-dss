@@ -45,7 +45,7 @@ const AlternativeAdd = () => {
         </div>
       </form>
 
-      {!toast ? name : <Toast message="Alternative added" type="success" />}
+      {!toast ? '' : <Toast message="Alternative added" type="success" />}
     </div>
   );
 };
