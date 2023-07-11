@@ -1,14 +1,13 @@
 import React from "react";
+import normalizeScores from "@/lib/normalizeScore";
 
-const ResultList = ({ data }) => {
+const NormalizedList = ({ data }) => {
   const criteriaNames = [...new Set(data.map((item) => item.criteria.name))];
-  const alternativeNames = [
-    ...new Set(data.map((item) => item.alternative.name)),
-  ];
-
+  const alternativeNames = [...new Set(data.map((item) => item.alternative.name))];
+  const normalizedScore = normalizeScores(data);
   return (
     <div className="overflow-x-auto">
-      <h1 className="text-lg">Original Data</h1>
+      <h1 className="text-lg">Normalized Data</h1>
       <table className="table table-zebra">
         <thead>
           <tr>
@@ -23,12 +22,12 @@ const ResultList = ({ data }) => {
             <tr key={alternative}>
               <td>{alternative}</td>
               {criteriaNames.map((criteria) => {
-                const score = data.find(
+                const score = normalizedScore.find(
                   (item) =>
                     item.criteria.name === criteria &&
                     item.alternative.name === alternative
-                ).score;
-                return <td key={criteria}>{score}</td>;
+                ).normalizedScore;
+                return <td key={criteria}>{score.toFixed(2)}</td>;
               })}
             </tr>
           ))}
@@ -38,4 +37,4 @@ const ResultList = ({ data }) => {
   );
 };
 
-export default ResultList;
+export default NormalizedList;

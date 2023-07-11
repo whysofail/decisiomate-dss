@@ -32,7 +32,10 @@ const CriteriaAdd = () => {
   };
   return (
     <div>
-      <form className="form flex flex-col sm:flex-row gap-3 justify-between" onSubmit={handleSubmit}>
+      <form
+        className="form flex flex-col sm:flex-row gap-3 justify-between"
+        onSubmit={handleSubmit}
+      >
         <div className="join w-full">
           <button type="button" className="btn join-item">
             Criteria
@@ -51,7 +54,7 @@ const CriteriaAdd = () => {
             Type
           </button>
           <select
-            className="select select-bordered w-full max-w-xs join-item"
+            className="select select-bordered w-full join-item"
             value={type}
             onChange={(e) => setType(e.target.value)}
           >
@@ -73,7 +76,7 @@ const CriteriaAdd = () => {
           />
         </div>
         {/* No button cause form cant be submitted */}
-        <button type="submit" className="hidden"></button> 
+        <button type="submit" className="hidden"></button>
       </form>
     </div>
   );

@@ -1,22 +1,6 @@
 "use client";
 import React from "react";
-const response = {
-  data: [
-    {
-      id: 7,
-      name: "Keren",
-      type: "Benefit",
-      weight: 50,
-    },
-    {
-      id: 8,
-      name: "Cost",
-      type: "Benefit",
-      weight: 50,
-    },
-  ],
-};
-const CriteriaMin = (data) => {
+const CriteriaMin = (data, { isValid, setValid }) => {
   const sumOfWeights = data.data.reduce((sum, obj) => sum + obj.weight, 0);
   return (
     <div>
@@ -38,7 +22,9 @@ const CriteriaMin = (data) => {
                 d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <span><b>Warning! Sum of the weights doesnt add up to 100</b></span>
+            <span>
+              <b>Warning! Sum of the weights doesnt add up to 100</b>
+            </span>
           </div>
         </div>
       )}

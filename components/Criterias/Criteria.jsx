@@ -8,7 +8,6 @@ const Criteria = () => {
       <div className="py-4">
         <CriteriaAdd />
       </div>
-
       <CriteriasList />
     </div>
   );

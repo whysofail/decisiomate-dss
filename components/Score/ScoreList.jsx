@@ -44,14 +44,14 @@ const ScoreList = ({ alternatives, criterias }) => {
         updatedScores[scoreIndex] = {
           alternativeId,
           criteriaId,
-          score: parseInt(value, 10),
+          score: parseFloat(value.toString().replace(',','.')),
         };
       } else {
         // Add new score
         updatedScores.push({
           alternativeId,
           criteriaId,
-          score: parseInt(value, 10),
+          score: parseFloat(value.toString().replace(',','.')),
         });
       }
 
@@ -68,7 +68,7 @@ const ScoreList = ({ alternatives, criterias }) => {
     e.preventDefault();
     const data = [...scores];
     console.log(data);
-    router.push('/results')
+    // router.push('/results')
   };
 
   return (

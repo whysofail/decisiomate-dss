@@ -8,11 +8,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body>
         <Navbar />
         <main>
-          <div className="align-middle justify-items-center min-h-screen pt-28 p-4 md:p-40 sm:p-60 sm:pt-12 bg-white">
+          <div className="min-h-screen pt-28 p-4 md:px-20 sm:px-40 sm:pt-8 bg-white">
             <main className="block">{children}</main>
           </div>
         </main>

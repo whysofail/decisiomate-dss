@@ -1,6 +1,10 @@
 import React from "react";
 import Criteria from "@/components/Criterias/Criteria";
 import Link from "next/link";
+
+export const metadata = {
+  title: 'DecisioMate | Criteria'
+}
 const Criterias = () => {
   return (
     <>
@@ -10,14 +14,6 @@ const Criterias = () => {
       </div>
       <div className="flex flex-col">
         <Criteria />
-        <div className="flex pt-4 justify-between">
-          <Link href="/alternative" prefetch={false}>
-            <button className="btn btn-neutral max-w-xs">Back</button>
-          </Link>
-          <Link href="/score" prefetch={false}>
-            <button className="btn btn-neutral max-w-xs">Next</button>
-          </Link>
-        </div>
       </div>
     </>
   );

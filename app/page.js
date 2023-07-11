@@ -6,7 +6,7 @@ export const metadata = {
 const Index = () => {
   return (
     <>
-      <div className="hero bg-white">
+      <div className="hero min-h-16 pt-40 bg-white">
         <div className="hero-content text-center">
           <div className="max-w-fit">
             <h1 className="text-4xl md:text-6xl sm:text-9xl font-bold">DecisioMate</h1>
