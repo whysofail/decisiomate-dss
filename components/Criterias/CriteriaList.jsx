@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const getCriterias = async () => {
   const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/criterias", {
-    cache: "no-cache",
+    cache: "no-store",
   });
   const data = await res.json();
   return data;

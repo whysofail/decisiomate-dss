@@ -4,8 +4,8 @@ import NormalizedList from './NormalizedList'
 import WeghtedList from "./WeghtedList";
 import SortedList from "./SortedList";
 const getAlternatives = async () => {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/score", {
-    cache: "no-cache",
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}` + "/score", {
+    cache: "no-store",
   });
   const data = await res.json();
   return data;

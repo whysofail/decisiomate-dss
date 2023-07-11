@@ -4,6 +4,8 @@ import Result from "@/components/Results/Result";
 export const metadata = {
   title: 'DecisioMate | Results'
 }
+export const dynamic = "force-dynamic"
+
 const Results = () => {
   return (
     <>

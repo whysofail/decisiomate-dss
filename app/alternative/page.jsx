@@ -1,6 +1,8 @@
 import Alternatives from "@/components/Alternatives/Alternatives";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic"
+
 export const metadata = {
   title: "DecisioMate | Alternatives",
   description: "Add your alternatives",
@@ -15,7 +17,7 @@ const Alternative = () => {
       <div className="flex flex-col">
         <Alternatives />
         <div className="pt-4  self-end">
-          <Link href="/criterias" prefetch={false}>
+          <Link href="/criterias">
             <button className="btn btn-neutral max-w-xs">Next</button>
           </Link>
         </div>

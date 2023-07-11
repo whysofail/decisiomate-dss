@@ -1,6 +1,7 @@
 import React from "react";
 import Criteria from "@/components/Criterias/Criteria";
-import Link from "next/link";
+
+export const dynamic = "force-dynamic"
 
 export const metadata = {
   title: 'DecisioMate | Criteria'

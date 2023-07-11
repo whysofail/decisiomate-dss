@@ -4,6 +4,7 @@ import Score from "@/components/Score/Score";
 export const metadata = {
   title: "DecisioMate | Scores",
 };
+export const dynamic = "force-dynamic"
 
 const Scores = () => {
   return (

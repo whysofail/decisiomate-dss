@@ -14,7 +14,8 @@ const AlternativeDelete = (props) => {
   const handleDelete = (id) => {
     const deleteData = async (id) => {
         await fetch(process.env.NEXT_PUBLIC_API_URL+`/alternatives/${id}`,{
-            method: 'DELETE'
+            method: 'DELETE',
+            cache: 'no-store'
         })
         
     }
