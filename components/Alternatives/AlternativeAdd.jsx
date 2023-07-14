@@ -24,7 +24,7 @@ const AlternativeAdd = () => {
     setData();
     setName("");
     setToast(true);
-    router.refresh();
+    router.replace(router.asPath);
     setTimeout(() => {
       setToast(false);
     }, 2000);
