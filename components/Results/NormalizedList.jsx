@@ -6,7 +6,7 @@ const NormalizedList = ({ data }) => {
   const alternativeNames = [...new Set(data.map((item) => item.alternative.name))];
   const normalizedScore = normalizeScores(data);
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto drop-shadow-lg">
       <h1 className="text-lg">Normalized Data</h1>
       <table className="table table-zebra">
         <thead>

@@ -8,7 +8,7 @@ const ResultList = ({ data }) => {
   const criteriaNames = [...new Set(data.map((item) => item.criteria.name))];
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto  drop-shadow-lg">
       <h1 className="text-lg">Weighted Scores</h1>
       <table className="table table-zebra">
         <thead>

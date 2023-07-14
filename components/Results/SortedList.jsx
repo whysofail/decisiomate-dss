@@ -17,8 +17,8 @@ const SortedList = ({ data }) => {
     };
   });
   return (
-    <div className="overflow-x-auto">
-      <h1 className="text-lg">Sorted List</h1>
+    <div className="overflow-x-auto drop-shadow-lg">
+      <h1 className="text-lg">Ranking.</h1>
       <table className="table table-zebra">
         <thead>
           <tr>
