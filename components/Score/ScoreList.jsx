@@ -64,11 +64,18 @@ const ScoreList = ({ alternatives, criterias }) => {
     console.log(scores);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const data = [...scores];
-    console.log(data);
-    // router.push('/results')
+    try {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}` + "/score", {
+        method: 'POST',
+        body: JSON.stringify(data),
+      })
+    } catch (error) {
+      console.log(error)
+    }
+    router.push('/results')
   };
 
   return (
