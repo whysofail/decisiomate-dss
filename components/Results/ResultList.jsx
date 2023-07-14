@@ -2,10 +2,7 @@ import React from "react";
 
 const ResultList = ({ data }) => {
   const criteriaNames = [...new Set(data.map((item) => item.criteria.name))];
-  const alternativeNames = [
-    ...new Set(data.map((item) => item.alternative.name)),
-  ];
-
+  const alternativeNames = [...new Set(data.map((item) => item.alternative.name))];
   return (
     <div className="overflow-x-auto  drop-shadow-lg">
       <h1 className="text-lg">Original Data</h1>

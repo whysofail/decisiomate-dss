@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Toast from "../Toast/Toast";
 const AlternativeAdd = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const [name, setName] = useState("");
   const [toast, setToast] = useState(false);
   const handleSubmit = (e) => {
@@ -24,7 +25,7 @@ const AlternativeAdd = () => {
     setData();
     setName("");
     setToast(true);
-    router.replace(router.asPath);
+    router.refresh();
     setTimeout(() => {
       setToast(false);
     }, 2000);

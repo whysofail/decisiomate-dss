@@ -27,7 +27,7 @@ const NormalizedList = ({ data }) => {
                     item.criteria.name === criteria &&
                     item.alternative.name === alternative
                 ).normalizedScore;
-                return <td key={criteria}>{score.toFixed(2)}</td>;
+                return <td key={criteria}>{score.toFixed(3)}</td>;
               })}
             </tr>
           ))}
