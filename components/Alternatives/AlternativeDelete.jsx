@@ -13,11 +13,14 @@ const AlternativeDelete = (props) => {
   };
   const handleDelete = (id) => {
     const deleteData = async (id) => {
-        await fetch(process.env.NEXT_PUBLIC_API_URL+`/alternatives/${id}`,{
+        try {
+          await fetch(process.env.NEXT_PUBLIC_API_URL+`/alternatives/${id}`,{
             method: 'DELETE',
             cache: 'no-store'
         })
-        
+        } catch (error) {
+          console.log(error)
+        }
     }
     deleteData(id)
     router.refresh()

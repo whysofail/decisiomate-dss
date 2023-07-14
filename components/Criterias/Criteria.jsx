@@ -6,7 +6,7 @@ const Criteria = () => {
   return (
     <div>
       <div className="py-4">
-        <CriteriaAdd />
+        {/* <CriteriaAdd /> ga dipake*/}
       </div>
       <CriteriasList />
     </div>

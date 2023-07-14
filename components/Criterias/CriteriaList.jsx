@@ -1,6 +1,6 @@
 import { React } from "react";
 import Table from "../Table/Table";
-import CriteriaDelete from "./CriteriaDelete";
+// import CriteriaDelete from "./CriteriaDelete"; 
 import CriteriaUpdate from "./CriteriaUpdate";
 import CriteriaMin from "./CriteriaMin";
 import Link from "next/link";
@@ -21,7 +21,8 @@ const CriteriasList = async () => {
       {criterias.data.length == 0 ? (
         "Nothing found. Please add some."
       ) : (
-        <Table {...criterias} inner={[CriteriaUpdate, CriteriaDelete]} />
+        <Table {...criterias} inner={[CriteriaUpdate]} />
+        // gajadi bisa delete
       )}
       <div>
         <div className="flex pt-4 justify-between">

@@ -10,8 +10,8 @@ const Criterias = () => {
   return (
     <>
       <div className="self-start">
-        <h1 className="text-3xl font-semibold">Add your Criteria</h1>
-        <small>Add Criteria to be calculated.</small>
+        <h1 className="text-3xl font-semibold">Criteria</h1>
+        <small>Criteria details</small>
       </div>
       <div className="flex flex-col">
         <Criteria />
