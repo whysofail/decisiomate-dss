@@ -29,7 +29,7 @@ const CriteriasList = async () => {
           <Link href="/alternative" prefetch={false}>
             <button className="btn btn-neutral max-w-xs">Back</button>
           </Link>
-          <Link href="/score" prefetch={false}>
+          <Link href="/scoreinput" prefetch={false}>
             <button className="btn btn-neutral max-w-xs">Next</button>
           </Link>
         </div>

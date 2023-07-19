@@ -1,7 +1,8 @@
 import Alternatives from "@/components/Alternatives/Alternatives";
 import Link from "next/link";
 
-export const dynamic = "force-dynamic"
+export const dynamic = 'force-dynamic';
+export const revalidate ='0'
 
 export const metadata = {
   title: "DecisioMate | Alternatives",

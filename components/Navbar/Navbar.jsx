@@ -52,6 +52,14 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                href="/score"
+                className={path == "/score" ? "active" : ""}
+              >
+                Score
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/results"
                 className={path == "/results" ? "active" : ""}
               >
@@ -93,6 +101,14 @@ const Navbar = () => {
               Criteria
             </Link>
           </li>
+          <li>
+              <Link
+                href="/score"
+                className={path == "/score" ? "active" : ""}
+              >
+                Score
+              </Link>
+            </li>
           <li>
             <Link
               href="/results"

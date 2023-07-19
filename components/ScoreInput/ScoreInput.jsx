@@ -1,5 +1,5 @@
 import React from 'react'
-import ScoreList from './ScoreList';
+import ScoreList from './ScoreInputList';
 const getAlternatives = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}` + "/alternatives", {
       cache: "no-store",
@@ -16,7 +16,7 @@ const getAlternatives = async () => {
     return data;
   };
 
-const Score = async () => {
+const ScoreInput = async () => {
     const alternatives = await getAlternatives()
     const criterias = await getCriterias()
   return (
@@ -26,4 +26,4 @@ const Score = async () => {
   )
 }
 
-export default Score
+export default ScoreInput

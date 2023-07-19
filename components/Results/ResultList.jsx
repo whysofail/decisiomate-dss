@@ -1,10 +1,31 @@
 import React from "react";
 
-const ResultList = ({ data }) => {
+const ResultList = ({ data, inner }) => {
+  const alternativeNames = [
+    ...new Set(data.map((item) => item.alternative.name)),
+  ];
+  const criteriaIds = [...new Set(data.map((item) => item.criteriaId))];
   const criteriaNames = [...new Set(data.map((item) => item.criteria.name))];
-  const alternativeNames = [...new Set(data.map((item) => item.alternative.name))];
+
+  // Group the data by alternativeId
+  const groupedData = {};
+  data.forEach((item) => {
+    const alternativeId = item.alternativeId;
+    if (!groupedData[alternativeId]) {
+      groupedData[alternativeId] = {
+        alternative: item.alternative,
+        scores: {},
+      };
+    }
+    groupedData[alternativeId].scores[item.criteriaId] = {
+      id: item.criteriaId,
+      name: item.criteria.name,
+      score: item.score,
+    };
+  });
+
   return (
-    <div className="overflow-x-auto  drop-shadow-lg">
+    <div className="overflow-x-auto overflow-y-auto drop-shadow-lg">
       <h1 className="text-lg">Original Data</h1>
       <table className="table table-zebra">
         <thead>
@@ -16,17 +37,19 @@ const ResultList = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {alternativeNames.map((alternative) => (
-            <tr key={alternative}>
-              <td>{alternative}</td>
-              {criteriaNames.map((criteria) => {
-                const score = data.find(
-                  (item) =>
-                    item.criteria.name === criteria &&
-                    item.alternative.name === alternative
-                ).score;
-                return <td key={criteria}>{score}</td>;
-              })}
+          {Object.values(groupedData).map((group) => (
+            <tr key={group.alternative.name}>
+              <td>{group.alternative.name}</td>
+              {criteriaIds.map((criteriaId) => (
+                <td key={criteriaId}>{group.scores[criteriaId].score}</td>
+              ))}
+              <td className="flex flex-row ml-auto gap-3 w-fit">
+                {!inner
+                  ? ""
+                  : Object.entries(inner).map(([key, Component]) => (
+                      <Component key={key} {...group} />
+                    ))}
+              </td>
             </tr>
           ))}
         </tbody>
