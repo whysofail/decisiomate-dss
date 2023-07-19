@@ -21,7 +21,10 @@ const ScoreInput = async () => {
     const criterias = await getCriterias()
   return (
     <div>
+      {alternatives.length > 0 ? 'Data empty' :
+      
         <ScoreList alternatives={alternatives} criterias={criterias}/> 
+        }
     </div>
   )
 }

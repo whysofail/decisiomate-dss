@@ -15,6 +15,9 @@ const Result = async () => {
   const { data } = await getAlternatives();
   return (
     <div className="flex flex-col gap-4">
+      {!data.length > 0 ? 'Data empty' : 
+      <>
+      
       <div>
       <ResultList data={data} />
       </div>
@@ -27,6 +30,8 @@ const Result = async () => {
       <div>
         <SortedList data={data}/>
       </div>
+      </>
+}
     </div>
   );
 };

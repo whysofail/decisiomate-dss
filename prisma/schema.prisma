@@ -6,8 +6,8 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "mysql"
+  url      = env("DATABASE_MYSQL")
 }
 
 model Alternative {
@@ -35,5 +35,5 @@ model AlternativeCriteriaScore {
   alternative   Alternative? @relation(fields: [alternativeId], references: [id])
   criteriaId    Int?
   criteria      Criteria?    @relation(fields: [criteriaId], references: [id])
-  score         Decimal         
+  score         Decimal      @default(0)
 }

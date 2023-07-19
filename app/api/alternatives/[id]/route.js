@@ -33,11 +33,18 @@ export const PUT = async (request, { params }) => {
 
 export const DELETE = async (request, { params }) => {
   try {
-    const data = await prisma.alternative.delete({
+    const deleteScore = prisma.alternativeCriteriaScore.deleteMany({
+      where: {
+        alternativeId: Number(params.id)
+      }
+    })
+    const deleteUser = prisma.alternative.delete({
       where : {
         id: Number(params.id)
       }
     })
+
+    await prisma.$transaction([deleteScore, deleteUser])
     return NextResponse.json(data, { status: 200 });
   } catch (err) {
     console.log(err)

@@ -4,7 +4,8 @@ import prisma from "@/lib/prisma";
 
 export const GET = async () => {
   try {
-    const data = await prisma.alternative.findMany({});
+    const data = await prisma.alternative.findMany({
+    });
     return NextResponse.json({ data }, { status: 200 });
   } catch (err) {
     console.log(err)
@@ -23,7 +24,20 @@ export const POST = async (request) => {
         name: name,
       }
     })
-    return NextResponse.json({ data }, { name: name }, { status: 200 });
+    const existingCriteria = await prisma.criteria.findMany();
+    const scores = await Promise.all(
+      existingCriteria.map(async (criterion) => {
+        return prisma.alternativeCriteriaScore.create({
+          data: {
+            alternativeId: data.id,
+            criteriaId: criterion.id,
+            score: 0,
+          },
+        });
+      })
+    );
+
+    return NextResponse.json({msg: 'Data created', status: 200 });
   } catch (err) {
     console.log(err);
     return NextResponse.json(err, { status: 400 });

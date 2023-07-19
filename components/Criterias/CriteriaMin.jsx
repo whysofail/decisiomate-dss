@@ -23,7 +23,7 @@ const CriteriaMin = (data, { isValid, setValid }) => {
               />
             </svg>
             <span>
-              <b>Warning! Sum of the weights doesnt add up to 100</b>
+              <p className="font-semibold">Warning! Sum of the weights doesnt add up to 100</p>
             </span>
           </div>
         </div>

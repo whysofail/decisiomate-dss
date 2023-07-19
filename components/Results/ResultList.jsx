@@ -13,7 +13,10 @@ const ResultList = ({ data, inner }) => {
     const alternativeId = item.alternativeId;
     if (!groupedData[alternativeId]) {
       groupedData[alternativeId] = {
-        alternative: item.alternative,
+        alternative: {
+          id: alternativeId,
+          name: item.alternative.name
+        },
         scores: {},
       };
     }
@@ -25,7 +28,7 @@ const ResultList = ({ data, inner }) => {
   });
 
   return (
-    <div className="overflow-x-auto overflow-y-auto drop-shadow-lg">
+    <div className="overflow-x-auto drop-shadow-lg">
       <h1 className="text-lg">Original Data</h1>
       <table className="table table-zebra">
         <thead>

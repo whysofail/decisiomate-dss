@@ -8,7 +8,7 @@ const Score = () => {
         <small>Score details</small>
       </div>
       <div className="flex flex-col">
-        <ScoreList />
+        <ScoreList className='h-screen'/>
       </div>
     </>
   );

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const path = usePathname();
   return (
-    <nav className="navbar bg-white shadow-md sticky top-0 z-[999]">
+    <nav className="navbar bg-white shadow-md sticky top-0 z-[998]">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

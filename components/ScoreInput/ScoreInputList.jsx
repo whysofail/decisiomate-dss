@@ -71,7 +71,8 @@ const ScoreList = ({ alternatives, criterias }) => {
     } catch (error) {
       console.log(error)
     }
-    router.push('/results')
+    console.log(data)
+    router.push('/score')
   };
 
   return (

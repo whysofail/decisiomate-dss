@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const getCriterias = async () => {
   const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/criterias", {
-    cache: "no-store",
+    cache: "no-cache",
   });
   const data = await res.json();
   return data;
@@ -29,7 +29,7 @@ const CriteriasList = async () => {
           <Link href="/alternative" prefetch={false}>
             <button className="btn btn-neutral max-w-xs">Back</button>
           </Link>
-          <Link href="/scoreinput" prefetch={false}>
+          <Link href="/score" prefetch={false}>
             <button className="btn btn-neutral max-w-xs">Next</button>
           </Link>
         </div>
